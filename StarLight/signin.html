@@ -1,0 +1,148 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>StarLight - SignIn</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./assets/css/login.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+  	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+  	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+  	<link rel="manifest" href="./assets/img/site.json">
+  	<link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#5bbad5">
+	  <meta name="msapplication-TileColor" content="#da532c">
+	  <meta name="theme-color" content="#ffffff">
+	
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	
+	  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	  <script src="assets/js/register-service-worker.js"></script>
+	  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header d-flex align-items-center">
+		<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+	
+		  <a href="index.html" class="logo d-flex align-items-center">
+			<h1>StarLight<span>.</span></h1>
+		  </a>
+	
+		  <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+		  <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+		  <nav id="navbar" class="navbar">
+			<ul>
+			  <li><a href="index.html">Home</a></li>
+			  <li><a href="about.html" >About</a></li>
+			  <li><a href="services.html">Services</a></li>
+			  <li><a href="projects.html">Projects</a></li>
+			  <li><a href="contact.html">Contact</a></li>
+			  <li><a href="login2.html" class="active">Complaint US</a></li>
+			</ul>
+		  </nav>
+	
+		</div>
+	  </header>
+
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign in</h3>
+			</div>
+			<div class="card-body">
+				<form>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="Email" id="email" required>
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" placeholder="password" id="password" required>
+					</div>
+					<div class="form-group">
+						<input type="submit" class="login_btn" id="signUp">
+					</div>
+				</form>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+	import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
+	import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+	import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js";
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	const firebaseConfig = {
+	  apiKey: "AIzaSyD-L00cQcdhs5aaLeZHOiVVVAVPlAnQk_U",
+	  authDomain: "authentication-87f02.firebaseapp.com",
+	  databaseURL: "https://authentication-87f02-default-rtdb.firebaseio.com",
+	  projectId: "authentication-87f02",
+	  storageBucket: "authentication-87f02.appspot.com",
+	  messagingSenderId: "290933245889",
+	  appId: "1:290933245889:web:0dbd709013988277d21140"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const database = getDatabase(app);
+	const auth = getAuth();
+
+	signUp.addEventListener('click', (e) => {
+
+		var email = document.getElementById('email').value
+		var password = document.getElementById('password').value
+
+		createUserWithEmailAndPassword(auth, email, password)
+  			.then((userCredential) => {
+    		// Signed in 
+    		const user = userCredential.user;
+			set(ref(database, 'users/' + user.uid), {
+				email: email,
+			})
+			alert('User Is Created!!');
+			window.location.href = "./login.html";
+    		// ...
+  		})
+  		.catch((error) => {
+    		const errorCode = error.code;
+    		const errorMessage = error.message;
+			alert(errorMessage);
+    		// ..
+ 		 });
+	})
+  </script>
+
+</html>
